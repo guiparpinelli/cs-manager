@@ -1,0 +1,27 @@
+[project]
+name = "cs-manager"
+version = "0.1.0"
+description = "Manage and lead your Counter-Strike team to victory. Recruit, train, and strategize to dominate the eSports scene in this immersive team management simulation."
+authors = [
+    { name = "Guilherme Parpinelli", email = "guilheerme.p@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cs_manager"]
